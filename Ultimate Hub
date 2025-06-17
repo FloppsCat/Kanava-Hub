@@ -239,7 +239,7 @@ local function WJIH_fake_script() -- RoofTPButton.LocalScript
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-		hrp.CFframe = CFrame.new(workspace:SighPlaceRegion:GetChildren()[28].Position)
+		hrp.CFframe = CFrame.new(workspace.SighPlaceRegion:GetChildren()[28].Position)
 		end)
 end
 coroutine.wrap(WJIH_fake_script)()
