@@ -20,6 +20,7 @@ local FireTPButton = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
 local PlrTPButton = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -78,7 +79,7 @@ OtherSideTPButton.BorderSizePixel = 0
 OtherSideTPButton.Position = UDim2.new(0.0195035469, 0, 0.405894458, 0)
 OtherSideTPButton.Size = UDim2.new(0, 139, 0, 40)
 OtherSideTPButton.Font = Enum.Font.SourceSans
-OtherSideTPButton.Text = "Tp to house roof"
+OtherSideTPButton.Text = "TP to other side"
 OtherSideTPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 OtherSideTPButton.TextSize = 14.000
 
@@ -226,26 +227,37 @@ PlrTPButton.Text = "Teleport"
 PlrTPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 PlrTPButton.TextSize = 14.000
 
+TextLabel_2.Parent = HubFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.177304968, 0, 0.0131578948, 0)
+TextLabel_2.Size = UDim2.new(0, 346, 0, 30)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Ultimate Kanava Hub"
+TextLabel_2.TextColor3 = Color3.fromRGB(85, 0, 255)
+TextLabel_2.TextSize = 40.000
+
 -- Scripts:
 
-local function AJCHFZ_fake_script() -- HubFrame.LocalScript 
+local function PJWO_fake_script() -- HubFrame.LocalScript 
 	local script = Instance.new('LocalScript', HubFrame)
 
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 	
 end
-coroutine.wrap(AJCHFZ_fake_script)()
-local function EDTVUJA_fake_script() -- RoofTPButton.LocalScript 
+coroutine.wrap(PJWO_fake_script)()
+local function EPOX_fake_script() -- RoofTPButton.LocalScript 
 	local script = Instance.new('LocalScript', RoofTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-		hrp.CFrame = CFrame.new(workspace.SignPlaceRegion:GetChildren()[28].Position)
+		hrp.CFrame = CFrame.new(-207.79895, 2100.49976, 193.571655, 0.869630933, 6.7570987e-08, -0.493702382, -7.0858853e-08, 1, 1.20516699e-08, 0.493702382, 2.45026808e-08, 0.869630933) -- house roof
 		end)
 end
-coroutine.wrap(EDTVUJA_fake_script)()
-local function DDLRES_fake_script() -- OtherSideTPButton.LocalScript 
+coroutine.wrap(EPOX_fake_script)()
+local function LRDWOLN_fake_script() -- OtherSideTPButton.LocalScript 
 	local script = Instance.new('LocalScript', OtherSideTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -253,17 +265,17 @@ local function DDLRES_fake_script() -- OtherSideTPButton.LocalScript
 		hrp2.CFrame = CFrame.new(workspace.SignPlaceRegion:GetChildren()[24])
 	end)
 end
-coroutine.wrap(DDLRES_fake_script)()
-local function BYXZ_fake_script() -- Roof2TPButton.LocalScript 
+coroutine.wrap(LRDWOLN_fake_script)()
+local function LIWJ_fake_script() -- Roof2TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Roof2TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local hrp1 = game.Players.LocalPlayer.Character.HumanoidRootPart
-		hrp1.CFrame = CFrame.new(workspace:GetChildren()[127].Position)
+		hrp1.CFrame = CFrame.new(72.1813431, 2071.49976, 22.1977749, 0.0584814586, -6.33128039e-09, 0.998288512, 3.36187994e-10, 1, 6.32244079e-09, -0.998288512, -3.41329395e-11, 0.0584814586) -- Store roof
 	end)
 end
-coroutine.wrap(BYXZ_fake_script)()
-local function KYMC_fake_script() -- Toilet2TPButton.LocalScript 
+coroutine.wrap(LIWJ_fake_script)()
+local function MHGIAVI_fake_script() -- Toilet2TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Toilet2TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -271,8 +283,8 @@ local function KYMC_fake_script() -- Toilet2TPButton.LocalScript
 		hrp4.CFrame = CFrame.new(workspace:GetChildren()[246].Position)
 	end)
 end
-coroutine.wrap(KYMC_fake_script)()
-local function IMPXE_fake_script() -- Toilet3TPButton.LocalScript 
+coroutine.wrap(MHGIAVI_fake_script)()
+local function WVMZNO_fake_script() -- Toilet3TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Toilet3TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -280,8 +292,8 @@ local function IMPXE_fake_script() -- Toilet3TPButton.LocalScript
 		hrp5.CFrame = CFrame.new(workspace:GetChildren()[214].Position)
 	end)
 end
-coroutine.wrap(IMPXE_fake_script)()
-local function GZFH_fake_script() -- Hatchway1TPButton.LocalScript 
+coroutine.wrap(WVMZNO_fake_script)()
+local function WOOWAO_fake_script() -- Hatchway1TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Hatchway1TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -289,8 +301,8 @@ local function GZFH_fake_script() -- Hatchway1TPButton.LocalScript
 		hrp1.CFrame = CFrame.new(workspace.doorsbylsplash.luk.luk.teehee.Position)
 	end)
 end
-coroutine.wrap(GZFH_fake_script)()
-local function FZARFY_fake_script() -- Hatchway2TPButton.LocalScript 
+coroutine.wrap(WOOWAO_fake_script)()
+local function UGUDHJZ_fake_script() -- Hatchway2TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Hatchway2TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -298,8 +310,8 @@ local function FZARFY_fake_script() -- Hatchway2TPButton.LocalScript
 		hrp1.CFrame = CFrame.new(workspace.doorsbylsplash.luk:GetChildren()[4].teehee.Position)
 	end)
 end
-coroutine.wrap(FZARFY_fake_script)()
-local function MPLJJD_fake_script() -- _69GTPButton.LocalScript 
+coroutine.wrap(UGUDHJZ_fake_script)()
+local function OVBHL_fake_script() -- _69GTPButton.LocalScript 
 	local script = Instance.new('LocalScript', _69GTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -307,17 +319,17 @@ local function MPLJJD_fake_script() -- _69GTPButton.LocalScript
 		hrp1.CFrame = CFrame.new(workspace.tower:GetChildren()[52].Position)
 	end)
 end
-coroutine.wrap(MPLJJD_fake_script)()
-local function UCZMM_fake_script() -- Toilet1TPButton.LocalScript 
+coroutine.wrap(OVBHL_fake_script)()
+local function JWLR_fake_script() -- Toilet1TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Toilet1TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local hrp3 = game.Players.LocalPlayer.Character.HumanoidRootPart
-		hrp3.CFrame = CFrame.new(workspace:GetChildren()[115].Position)
+		hrp3.CFrame = CFrame.new(30.7544441, 2051.70972, -56.5102043, -0.646611035, -7.70908759e-09, 0.762819886, -6.34759667e-09, 1, 4.72544315e-09, -0.762819886, -1.78654913e-09, -0.646611035) -- toilet 1
 	end)
 end
-coroutine.wrap(UCZMM_fake_script)()
-local function VJZYG_fake_script() -- FireTPButton.LocalScript 
+coroutine.wrap(JWLR_fake_script)()
+local function JYUK_fake_script() -- FireTPButton.LocalScript 
 	local script = Instance.new('LocalScript', FireTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -325,8 +337,8 @@ local function VJZYG_fake_script() -- FireTPButton.LocalScript
 		hrp1.CFrame = CFrame.new(workspace:GetChildren()[182].Position)
 	end)
 end
-coroutine.wrap(VJZYG_fake_script)()
-local function LTEDMJD_fake_script() -- PlrTPButton.LocalScript 
+coroutine.wrap(JYUK_fake_script)()
+local function QHNHGNH_fake_script() -- PlrTPButton.LocalScript 
 	local script = Instance.new('LocalScript', PlrTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -349,4 +361,4 @@ local function LTEDMJD_fake_script() -- PlrTPButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LTEDMJD_fake_script)()
+coroutine.wrap(QHNHGNH_fake_script)()
