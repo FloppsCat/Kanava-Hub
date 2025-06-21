@@ -6,7 +6,7 @@
 local KanavaHub = Instance.new("ScreenGui")
 local HubFrame = Instance.new("Frame")
 local TeleportsButton = Instance.new("TextButton")
-local ImageLabel = Instance.new("ImageLabel")
+local TPPage = Instance.new("ImageLabel")
 local RoofTPButton = Instance.new("TextButton")
 local OtherSideTPButton = Instance.new("TextButton")
 local Roof2TPButton = Instance.new("TextButton")
@@ -21,6 +21,11 @@ local TextLabel = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
 local PlrTPButton = Instance.new("TextButton")
 local TextLabel_2 = Instance.new("TextLabel")
+local PVPButton = Instance.new("TextButton")
+local PVPPage = Instance.new("ImageLabel")
+local AttackButton = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local NameBox = Instance.new("TextBox")
 
 --Properties:
 
@@ -49,16 +54,18 @@ TeleportsButton.Text = "Teleports"
 TeleportsButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TeleportsButton.TextSize = 14.000
 
-ImageLabel.Parent = HubFrame
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 2
-ImageLabel.Position = UDim2.new(-0.00125879596, 0, 0.108379163, 0)
-ImageLabel.Size = UDim2.new(0, 564, 0, 283)
-ImageLabel.Image = "rbxassetid://121928820297984"
+TPPage.Name = "TPPage"
+TPPage.Parent = HubFrame
+TPPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TPPage.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TPPage.BorderSizePixel = 2
+TPPage.Position = UDim2.new(-0.00125879596, 0, 0.108379163, 0)
+TPPage.Size = UDim2.new(0, 564, 0, 283)
+TPPage.Visible = false
+TPPage.Image = "rbxassetid://121928820297984"
 
 RoofTPButton.Name = "RoofTPButton"
-RoofTPButton.Parent = ImageLabel
+RoofTPButton.Parent = TPPage
 RoofTPButton.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
 RoofTPButton.BackgroundTransparency = 0.400
 RoofTPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -71,7 +78,7 @@ RoofTPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 RoofTPButton.TextSize = 14.000
 
 OtherSideTPButton.Name = "OtherSideTPButton"
-OtherSideTPButton.Parent = ImageLabel
+OtherSideTPButton.Parent = TPPage
 OtherSideTPButton.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
 OtherSideTPButton.BackgroundTransparency = 0.400
 OtherSideTPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -84,7 +91,7 @@ OtherSideTPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 OtherSideTPButton.TextSize = 14.000
 
 Roof2TPButton.Name = "Roof2TPButton"
-Roof2TPButton.Parent = ImageLabel
+Roof2TPButton.Parent = TPPage
 Roof2TPButton.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
 Roof2TPButton.BackgroundTransparency = 0.400
 Roof2TPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -97,7 +104,7 @@ Roof2TPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 Roof2TPButton.TextSize = 14.000
 
 Toilet2TPButton.Name = "Toilet2TPButton"
-Toilet2TPButton.Parent = ImageLabel
+Toilet2TPButton.Parent = TPPage
 Toilet2TPButton.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
 Toilet2TPButton.BackgroundTransparency = 0.400
 Toilet2TPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -110,7 +117,7 @@ Toilet2TPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 Toilet2TPButton.TextSize = 14.000
 
 Toilet3TPButton.Name = "Toilet3TPButton"
-Toilet3TPButton.Parent = ImageLabel
+Toilet3TPButton.Parent = TPPage
 Toilet3TPButton.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
 Toilet3TPButton.BackgroundTransparency = 0.400
 Toilet3TPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -123,7 +130,7 @@ Toilet3TPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 Toilet3TPButton.TextSize = 14.000
 
 Hatchway1TPButton.Name = "Hatchway1TPButton"
-Hatchway1TPButton.Parent = ImageLabel
+Hatchway1TPButton.Parent = TPPage
 Hatchway1TPButton.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
 Hatchway1TPButton.BackgroundTransparency = 0.400
 Hatchway1TPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -136,7 +143,7 @@ Hatchway1TPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 Hatchway1TPButton.TextSize = 14.000
 
 Hatchway2TPButton.Name = "Hatchway2TPButton"
-Hatchway2TPButton.Parent = ImageLabel
+Hatchway2TPButton.Parent = TPPage
 Hatchway2TPButton.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
 Hatchway2TPButton.BackgroundTransparency = 0.400
 Hatchway2TPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -149,7 +156,7 @@ Hatchway2TPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 Hatchway2TPButton.TextSize = 14.000
 
 _69GTPButton.Name = "69GTPButton"
-_69GTPButton.Parent = ImageLabel
+_69GTPButton.Parent = TPPage
 _69GTPButton.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
 _69GTPButton.BackgroundTransparency = 0.400
 _69GTPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -162,7 +169,7 @@ _69GTPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 _69GTPButton.TextSize = 14.000
 
 Toilet1TPButton.Name = "Toilet1TPButton"
-Toilet1TPButton.Parent = ImageLabel
+Toilet1TPButton.Parent = TPPage
 Toilet1TPButton.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
 Toilet1TPButton.BackgroundTransparency = 0.400
 Toilet1TPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -175,7 +182,7 @@ Toilet1TPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 Toilet1TPButton.TextSize = 14.000
 
 FireTPButton.Name = "FireTPButton"
-FireTPButton.Parent = ImageLabel
+FireTPButton.Parent = TPPage
 FireTPButton.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
 FireTPButton.BackgroundTransparency = 0.400
 FireTPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -187,7 +194,7 @@ FireTPButton.Text = "TP to Fire place"
 FireTPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 FireTPButton.TextSize = 14.000
 
-TextLabel.Parent = ImageLabel
+TextLabel.Parent = TPPage
 TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BackgroundTransparency = 0.300
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -199,7 +206,7 @@ TextLabel.Text = "TP to player"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 0)
 TextLabel.TextSize = 14.000
 
-TextBox.Parent = ImageLabel
+TextBox.Parent = TPPage
 TextBox.BackgroundColor3 = Color3.fromRGB(57, 61, 58)
 TextBox.BackgroundTransparency = 0.300
 TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -215,7 +222,7 @@ TextBox.TextSize = 14.000
 TextBox.TextWrapped = true
 
 PlrTPButton.Name = "PlrTPButton"
-PlrTPButton.Parent = ImageLabel
+PlrTPButton.Parent = TPPage
 PlrTPButton.BackgroundColor3 = Color3.fromRGB(23, 138, 52)
 PlrTPButton.BackgroundTransparency = 0.500
 PlrTPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -238,44 +245,115 @@ TextLabel_2.Text = "Ultimate Kanava Hub"
 TextLabel_2.TextColor3 = Color3.fromRGB(85, 0, 255)
 TextLabel_2.TextSize = 40.000
 
+PVPButton.Name = "PVPButton"
+PVPButton.Parent = HubFrame
+PVPButton.BackgroundColor3 = Color3.fromRGB(85, 0, 127)
+PVPButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PVPButton.BorderSizePixel = 0
+PVPButton.Position = UDim2.new(0.234042555, 0, 0.881578922, 0)
+PVPButton.Size = UDim2.new(0, 109, 0, 37)
+PVPButton.Style = Enum.ButtonStyle.RobloxRoundButton
+PVPButton.Font = Enum.Font.SourceSans
+PVPButton.Text = "PVP"
+PVPButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+PVPButton.TextSize = 14.000
+
+PVPPage.Name = "PVPPage"
+PVPPage.Parent = HubFrame
+PVPPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PVPPage.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PVPPage.BorderSizePixel = 2
+PVPPage.Position = UDim2.new(-0.00125879596, 0, 0.108379163, 0)
+PVPPage.Size = UDim2.new(0, 564, 0, 283)
+PVPPage.Image = "rbxassetid://121928820297984"
+
+AttackButton.Name = "AttackButton"
+AttackButton.Parent = PVPPage
+AttackButton.BackgroundColor3 = Color3.fromRGB(77, 75, 70)
+AttackButton.BackgroundTransparency = 0.200
+AttackButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AttackButton.BorderSizePixel = 0
+AttackButton.Position = UDim2.new(0.0372340418, 0, 0.378091872, 0)
+AttackButton.Size = UDim2.new(0, 145, 0, 34)
+AttackButton.Font = Enum.Font.SourceSans
+AttackButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+AttackButton.TextSize = 14.000
+
+TextLabel_3.Parent = PVPPage
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BackgroundTransparency = 0.200
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.0177304968, 0, 0.0212014131, 0)
+TextLabel_3.Size = UDim2.new(0, 168, 0, 38)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "TP attack player"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 0)
+TextLabel_3.TextSize = 14.000
+
+NameBox.Name = "NameBox"
+NameBox.Parent = PVPPage
+NameBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NameBox.BorderColor3 = Color3.fromRGB(85, 0, 127)
+NameBox.BorderSizePixel = 2
+NameBox.Position = UDim2.new(0.0189892929, 0, 0.204946995, 0)
+NameBox.Size = UDim2.new(0, 167, 0, 37)
+NameBox.Font = Enum.Font.SourceSans
+NameBox.PlaceholderColor3 = Color3.fromRGB(85, 0, 127)
+NameBox.PlaceholderText = "Player name here"
+NameBox.Text = ""
+NameBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+NameBox.TextSize = 14.000
+
 -- Scripts:
 
-local function PJWO_fake_script() -- HubFrame.LocalScript 
+local function GPBIVL_fake_script() -- TeleportsButton.LocalScript 
+	local script = Instance.new('LocalScript', TeleportsButton)
+
+	local page1 = script.Parent.Parent.TPPage
+	local page2 = script.Parent.Parent.PVPPage
+	script.Parent.MouseButton1Click:Connect(function()
+		page1.Visible = true
+		page2.Visible = false
+	end)
+end
+coroutine.wrap(GPBIVL_fake_script)()
+local function MROXFZ_fake_script() -- HubFrame.LocalScript 
 	local script = Instance.new('LocalScript', HubFrame)
 
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 	
 end
-coroutine.wrap(PJWO_fake_script)()
-local function EPOX_fake_script() -- RoofTPButton.LocalScript 
+coroutine.wrap(MROXFZ_fake_script)()
+local function OHBJ_fake_script() -- RoofTPButton.LocalScript 
 	local script = Instance.new('LocalScript', RoofTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 	local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-		hrp.CFrame = CFrame.new(-207.79895, 2100.49976, 193.571655, 0.869630933, 6.7570987e-08, -0.493702382, -7.0858853e-08, 1, 1.20516699e-08, 0.493702382, 2.45026808e-08, 0.869630933) -- house roof
+		hrp.CFrame = CFrame.new(-207.79895, 2100.49976, 193.571655, 0.869630933, 6.7570987e-08, -0.493702382, -7.0858853e-08, 1, 1.20516699e-08, 0.493702382, 2.45026808e-08, 0.869630933)
 		end)
 end
-coroutine.wrap(EPOX_fake_script)()
-local function LRDWOLN_fake_script() -- OtherSideTPButton.LocalScript 
+coroutine.wrap(OHBJ_fake_script)()
+local function SPPYZYF_fake_script() -- OtherSideTPButton.LocalScript 
 	local script = Instance.new('LocalScript', OtherSideTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local hrp2 = game.Players.LocalPlayer.Character.HumanoidRootPart
-		hrp2.CFrame = CFrame.new(workspace.SignPlaceRegion:GetChildren()[24])
+		hrp2.CFrame = CFrame.new(-20.4017887, 2051.5, 197.893433, 0.998041749, 5.8155214e-09, -0.0625512823, -5.6545999e-09, 1, 2.74965628e-09, 0.0625512823, -2.3905693e-09, 0.998041749)
 	end)
 end
-coroutine.wrap(LRDWOLN_fake_script)()
-local function LIWJ_fake_script() -- Roof2TPButton.LocalScript 
+coroutine.wrap(SPPYZYF_fake_script)()
+local function ATBLGZ_fake_script() -- Roof2TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Roof2TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local hrp1 = game.Players.LocalPlayer.Character.HumanoidRootPart
-		hrp1.CFrame = CFrame.new(72.1813431, 2071.49976, 22.1977749, 0.0584814586, -6.33128039e-09, 0.998288512, 3.36187994e-10, 1, 6.32244079e-09, -0.998288512, -3.41329395e-11, 0.0584814586) -- Store roof
+		hrp1.CFrame = CFrame.new(72.1813431, 2071.49976, 22.1977749, 0.0584814586, -6.33128039e-09, 0.998288512, 3.36187994e-10, 1, 6.32244079e-09, -0.998288512, -3.41329395e-11, 0.0584814586)
 	end)
 end
-coroutine.wrap(LIWJ_fake_script)()
-local function MHGIAVI_fake_script() -- Toilet2TPButton.LocalScript 
+coroutine.wrap(ATBLGZ_fake_script)()
+local function MHTFS_fake_script() -- Toilet2TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Toilet2TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -283,17 +361,17 @@ local function MHGIAVI_fake_script() -- Toilet2TPButton.LocalScript
 		hrp4.CFrame = CFrame.new(workspace:GetChildren()[246].Position)
 	end)
 end
-coroutine.wrap(MHGIAVI_fake_script)()
-local function WVMZNO_fake_script() -- Toilet3TPButton.LocalScript 
+coroutine.wrap(MHTFS_fake_script)()
+local function DECH_fake_script() -- Toilet3TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Toilet3TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local hrp5 = game.Players.LocalPlayer.Character.HumanoidRootPart
-		hrp5.CFrame = CFrame.new(workspace:GetChildren()[214].Position)
+		hrp5.CFrame = CFrame.new(225.669785, 2023.49988, 67.2116394, -0.997978747, -3.00349932e-08, -0.063548319, -3.60470196e-08, 1, 9.34591142e-08, 0.063548319, 9.55609352e-08, -0.997978747)
 	end)
 end
-coroutine.wrap(WVMZNO_fake_script)()
-local function WOOWAO_fake_script() -- Hatchway1TPButton.LocalScript 
+coroutine.wrap(DECH_fake_script)()
+local function SHFOZFE_fake_script() -- Hatchway1TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Hatchway1TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -301,8 +379,8 @@ local function WOOWAO_fake_script() -- Hatchway1TPButton.LocalScript
 		hrp1.CFrame = CFrame.new(workspace.doorsbylsplash.luk.luk.teehee.Position)
 	end)
 end
-coroutine.wrap(WOOWAO_fake_script)()
-local function UGUDHJZ_fake_script() -- Hatchway2TPButton.LocalScript 
+coroutine.wrap(SHFOZFE_fake_script)()
+local function LGMUBWY_fake_script() -- Hatchway2TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Hatchway2TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -310,8 +388,8 @@ local function UGUDHJZ_fake_script() -- Hatchway2TPButton.LocalScript
 		hrp1.CFrame = CFrame.new(workspace.doorsbylsplash.luk:GetChildren()[4].teehee.Position)
 	end)
 end
-coroutine.wrap(UGUDHJZ_fake_script)()
-local function OVBHL_fake_script() -- _69GTPButton.LocalScript 
+coroutine.wrap(LGMUBWY_fake_script)()
+local function YXYAPU_fake_script() -- _69GTPButton.LocalScript 
 	local script = Instance.new('LocalScript', _69GTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -319,8 +397,8 @@ local function OVBHL_fake_script() -- _69GTPButton.LocalScript
 		hrp1.CFrame = CFrame.new(workspace.tower:GetChildren()[52].Position)
 	end)
 end
-coroutine.wrap(OVBHL_fake_script)()
-local function JWLR_fake_script() -- Toilet1TPButton.LocalScript 
+coroutine.wrap(YXYAPU_fake_script)()
+local function PTVM_fake_script() -- Toilet1TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Toilet1TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -328,17 +406,17 @@ local function JWLR_fake_script() -- Toilet1TPButton.LocalScript
 		hrp3.CFrame = CFrame.new(30.7544441, 2051.70972, -56.5102043, -0.646611035, -7.70908759e-09, 0.762819886, -6.34759667e-09, 1, 4.72544315e-09, -0.762819886, -1.78654913e-09, -0.646611035) -- toilet 1
 	end)
 end
-coroutine.wrap(JWLR_fake_script)()
-local function JYUK_fake_script() -- FireTPButton.LocalScript 
+coroutine.wrap(PTVM_fake_script)()
+local function ASCGU_fake_script() -- FireTPButton.LocalScript 
 	local script = Instance.new('LocalScript', FireTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local hrp1 = game.Players.LocalPlayer.Character.HumanoidRootPart
-		hrp1.CFrame = CFrame.new(workspace:GetChildren()[182].Position)
+		hrp1.CFrame = CFrame.new(-78.0079346, 2051.49707, 100.371971, -0.814728141, -6.69329694e-08, -0.579843104, -4.18751505e-08, 1, -5.65948035e-08, 0.579843104, -2.18283613e-08, -0.814728141)
 	end)
 end
-coroutine.wrap(JYUK_fake_script)()
-local function QHNHGNH_fake_script() -- PlrTPButton.LocalScript 
+coroutine.wrap(ASCGU_fake_script)()
+local function HRWMN_fake_script() -- PlrTPButton.LocalScript 
 	local script = Instance.new('LocalScript', PlrTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -361,4 +439,88 @@ local function QHNHGNH_fake_script() -- PlrTPButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QHNHGNH_fake_script)()
+coroutine.wrap(HRWMN_fake_script)()
+local function IAXBDC_fake_script() -- PVPButton.LocalScript 
+	local script = Instance.new('LocalScript', PVPButton)
+
+	local page1 = script.Parent.Parent.TPPage
+	local page2 = script.Parent.Parent.PVPPage
+	script.Parent.MouseButton1Click:Connect(function()
+		page1.Visible = false
+		page2.Visible = true
+	end)
+end
+coroutine.wrap(IAXBDC_fake_script)()
+local function SXLFV_fake_script() -- AttackButton.LocalScript 
+	local script = Instance.new('LocalScript', AttackButton)
+
+	local pvpbutton = script.Parent
+	local txt = script.Parent.Parent.NameBox
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local player = Players.LocalPlayer
+	
+	local FOLLOW_DURATION = 1 
+	local HIT_INTERVAL = 0.2
+	local FOLLOW_DISTANCE = 0.5
+	local HEIGHT_OFFSET = 0.2
+	
+	local hitRemote = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("HitRequest")
+	
+	local function executeAttack(targetPlayer)
+		local character = player.Character
+		if not character then return end
+	
+		local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+		if not humanoidRootPart then return end
+	
+		local originalCFrame = humanoidRootPart.CFrame
+		local targetCharacter = targetPlayer.Character
+		if not targetCharacter then return end
+	
+		local targetRoot = targetCharacter:FindFirstChild("HumanoidRootPart")
+		if not targetRoot then return end
+	
+		local attackStart = os.clock()
+		local lastHitTime = 0
+	
+		local connection
+		connection = RunService.Heartbeat:Connect(function()
+			local now = os.clock()
+			if now - attackStart >= FOLLOW_DURATION then
+				connection:Disconnect()
+				humanoidRootPart.CFrame = originalCFrame
+				return
+			end
+	
+			-- Плавное перемещение
+			local offset = targetRoot.CFrame.LookVector * -FOLLOW_DISTANCE
+			local newPosition = targetRoot.Position + offset + Vector3.new(0, HEIGHT_OFFSET, 0)
+			humanoidRootPart.CFrame = humanoidRootPart.CFrame:Lerp(
+				CFrame.new(newPosition, targetRoot.Position),
+				0.3
+			)
+	
+			-- Атака с интервалом
+			if now - lastHitTime >= HIT_INTERVAL then
+				pcall(function() hitRemote:InvokeServer() end)
+				lastHitTime = now
+			end
+		end)
+	end
+	
+	-- Обработчик кнопки (без изменений)
+	pvpbutton.MouseButton1Click:Connect(function()
+		local targetName = txt.Text
+		if targetName == "" then return end
+	
+		for _, plr in ipairs(Players:GetPlayers()) do
+			if plr ~= player and plr.Name:lower():find(targetName:lower()) then
+				executeAttack(plr)
+				return
+			end
+		end
+	end)
+end
+coroutine.wrap(SXLFV_fake_script)()
