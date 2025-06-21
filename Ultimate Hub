@@ -26,6 +26,7 @@ local PVPPage = Instance.new("ImageLabel")
 local AttackButton = Instance.new("TextButton")
 local TextLabel_3 = Instance.new("TextLabel")
 local NameBox = Instance.new("TextBox")
+local ImageButton = Instance.new("ImageButton")
 
 --Properties:
 
@@ -276,7 +277,8 @@ AttackButton.BorderSizePixel = 0
 AttackButton.Position = UDim2.new(0.0372340418, 0, 0.378091872, 0)
 AttackButton.Size = UDim2.new(0, 145, 0, 34)
 AttackButton.Font = Enum.Font.SourceSans
-AttackButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+AttackButton.Text = "Attack"
+AttackButton.TextColor3 = Color3.fromRGB(85, 0, 255)
 AttackButton.TextSize = 14.000
 
 TextLabel_3.Parent = PVPPage
@@ -305,9 +307,19 @@ NameBox.Text = ""
 NameBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 NameBox.TextSize = 14.000
 
+ImageButton.Parent = KanavaHub
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.0508209541, 0, 0.349502474, 0)
+ImageButton.Size = UDim2.new(0, 100, 0, 94)
+ImageButton.AutoButtonColor = false
+ImageButton.Image = "rbxassetid://126847047647834"
+
 -- Scripts:
 
-local function GPBIVL_fake_script() -- TeleportsButton.LocalScript 
+local function TNOKU_fake_script() -- TeleportsButton.LocalScript 
 	local script = Instance.new('LocalScript', TeleportsButton)
 
 	local page1 = script.Parent.Parent.TPPage
@@ -317,16 +329,16 @@ local function GPBIVL_fake_script() -- TeleportsButton.LocalScript
 		page2.Visible = false
 	end)
 end
-coroutine.wrap(GPBIVL_fake_script)()
-local function MROXFZ_fake_script() -- HubFrame.LocalScript 
+coroutine.wrap(TNOKU_fake_script)()
+local function BRZDPA_fake_script() -- HubFrame.LocalScript 
 	local script = Instance.new('LocalScript', HubFrame)
 
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 	
 end
-coroutine.wrap(MROXFZ_fake_script)()
-local function OHBJ_fake_script() -- RoofTPButton.LocalScript 
+coroutine.wrap(BRZDPA_fake_script)()
+local function FQGVW_fake_script() -- RoofTPButton.LocalScript 
 	local script = Instance.new('LocalScript', RoofTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -334,8 +346,8 @@ local function OHBJ_fake_script() -- RoofTPButton.LocalScript
 		hrp.CFrame = CFrame.new(-207.79895, 2100.49976, 193.571655, 0.869630933, 6.7570987e-08, -0.493702382, -7.0858853e-08, 1, 1.20516699e-08, 0.493702382, 2.45026808e-08, 0.869630933)
 		end)
 end
-coroutine.wrap(OHBJ_fake_script)()
-local function SPPYZYF_fake_script() -- OtherSideTPButton.LocalScript 
+coroutine.wrap(FQGVW_fake_script)()
+local function TYIZVW_fake_script() -- OtherSideTPButton.LocalScript 
 	local script = Instance.new('LocalScript', OtherSideTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -343,8 +355,8 @@ local function SPPYZYF_fake_script() -- OtherSideTPButton.LocalScript
 		hrp2.CFrame = CFrame.new(-20.4017887, 2051.5, 197.893433, 0.998041749, 5.8155214e-09, -0.0625512823, -5.6545999e-09, 1, 2.74965628e-09, 0.0625512823, -2.3905693e-09, 0.998041749)
 	end)
 end
-coroutine.wrap(SPPYZYF_fake_script)()
-local function ATBLGZ_fake_script() -- Roof2TPButton.LocalScript 
+coroutine.wrap(TYIZVW_fake_script)()
+local function CCTMBDS_fake_script() -- Roof2TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Roof2TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -352,8 +364,8 @@ local function ATBLGZ_fake_script() -- Roof2TPButton.LocalScript
 		hrp1.CFrame = CFrame.new(72.1813431, 2071.49976, 22.1977749, 0.0584814586, -6.33128039e-09, 0.998288512, 3.36187994e-10, 1, 6.32244079e-09, -0.998288512, -3.41329395e-11, 0.0584814586)
 	end)
 end
-coroutine.wrap(ATBLGZ_fake_script)()
-local function MHTFS_fake_script() -- Toilet2TPButton.LocalScript 
+coroutine.wrap(CCTMBDS_fake_script)()
+local function GGHN_fake_script() -- Toilet2TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Toilet2TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -361,8 +373,8 @@ local function MHTFS_fake_script() -- Toilet2TPButton.LocalScript
 		hrp4.CFrame = CFrame.new(workspace:GetChildren()[246].Position)
 	end)
 end
-coroutine.wrap(MHTFS_fake_script)()
-local function DECH_fake_script() -- Toilet3TPButton.LocalScript 
+coroutine.wrap(GGHN_fake_script)()
+local function HXKN_fake_script() -- Toilet3TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Toilet3TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -370,8 +382,8 @@ local function DECH_fake_script() -- Toilet3TPButton.LocalScript
 		hrp5.CFrame = CFrame.new(225.669785, 2023.49988, 67.2116394, -0.997978747, -3.00349932e-08, -0.063548319, -3.60470196e-08, 1, 9.34591142e-08, 0.063548319, 9.55609352e-08, -0.997978747)
 	end)
 end
-coroutine.wrap(DECH_fake_script)()
-local function SHFOZFE_fake_script() -- Hatchway1TPButton.LocalScript 
+coroutine.wrap(HXKN_fake_script)()
+local function EGVVSJH_fake_script() -- Hatchway1TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Hatchway1TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -379,8 +391,8 @@ local function SHFOZFE_fake_script() -- Hatchway1TPButton.LocalScript
 		hrp1.CFrame = CFrame.new(workspace.doorsbylsplash.luk.luk.teehee.Position)
 	end)
 end
-coroutine.wrap(SHFOZFE_fake_script)()
-local function LGMUBWY_fake_script() -- Hatchway2TPButton.LocalScript 
+coroutine.wrap(EGVVSJH_fake_script)()
+local function TIJYT_fake_script() -- Hatchway2TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Hatchway2TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -388,8 +400,8 @@ local function LGMUBWY_fake_script() -- Hatchway2TPButton.LocalScript
 		hrp1.CFrame = CFrame.new(workspace.doorsbylsplash.luk:GetChildren()[4].teehee.Position)
 	end)
 end
-coroutine.wrap(LGMUBWY_fake_script)()
-local function YXYAPU_fake_script() -- _69GTPButton.LocalScript 
+coroutine.wrap(TIJYT_fake_script)()
+local function XPVZKK_fake_script() -- _69GTPButton.LocalScript 
 	local script = Instance.new('LocalScript', _69GTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -397,8 +409,8 @@ local function YXYAPU_fake_script() -- _69GTPButton.LocalScript
 		hrp1.CFrame = CFrame.new(workspace.tower:GetChildren()[52].Position)
 	end)
 end
-coroutine.wrap(YXYAPU_fake_script)()
-local function PTVM_fake_script() -- Toilet1TPButton.LocalScript 
+coroutine.wrap(XPVZKK_fake_script)()
+local function JKCFAWA_fake_script() -- Toilet1TPButton.LocalScript 
 	local script = Instance.new('LocalScript', Toilet1TPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -406,8 +418,8 @@ local function PTVM_fake_script() -- Toilet1TPButton.LocalScript
 		hrp3.CFrame = CFrame.new(30.7544441, 2051.70972, -56.5102043, -0.646611035, -7.70908759e-09, 0.762819886, -6.34759667e-09, 1, 4.72544315e-09, -0.762819886, -1.78654913e-09, -0.646611035) -- toilet 1
 	end)
 end
-coroutine.wrap(PTVM_fake_script)()
-local function ASCGU_fake_script() -- FireTPButton.LocalScript 
+coroutine.wrap(JKCFAWA_fake_script)()
+local function VLPKTQ_fake_script() -- FireTPButton.LocalScript 
 	local script = Instance.new('LocalScript', FireTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -415,8 +427,8 @@ local function ASCGU_fake_script() -- FireTPButton.LocalScript
 		hrp1.CFrame = CFrame.new(-78.0079346, 2051.49707, 100.371971, -0.814728141, -6.69329694e-08, -0.579843104, -4.18751505e-08, 1, -5.65948035e-08, 0.579843104, -2.18283613e-08, -0.814728141)
 	end)
 end
-coroutine.wrap(ASCGU_fake_script)()
-local function HRWMN_fake_script() -- PlrTPButton.LocalScript 
+coroutine.wrap(VLPKTQ_fake_script)()
+local function AONMJ_fake_script() -- PlrTPButton.LocalScript 
 	local script = Instance.new('LocalScript', PlrTPButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -439,8 +451,8 @@ local function HRWMN_fake_script() -- PlrTPButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HRWMN_fake_script)()
-local function IAXBDC_fake_script() -- PVPButton.LocalScript 
+coroutine.wrap(AONMJ_fake_script)()
+local function PRMD_fake_script() -- PVPButton.LocalScript 
 	local script = Instance.new('LocalScript', PVPButton)
 
 	local page1 = script.Parent.Parent.TPPage
@@ -450,8 +462,8 @@ local function IAXBDC_fake_script() -- PVPButton.LocalScript
 		page2.Visible = true
 	end)
 end
-coroutine.wrap(IAXBDC_fake_script)()
-local function SXLFV_fake_script() -- AttackButton.LocalScript 
+coroutine.wrap(PRMD_fake_script)()
+local function DLOEE_fake_script() -- AttackButton.LocalScript 
 	local script = Instance.new('LocalScript', AttackButton)
 
 	local pvpbutton = script.Parent
@@ -523,4 +535,23 @@ local function SXLFV_fake_script() -- AttackButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SXLFV_fake_script)()
+coroutine.wrap(DLOEE_fake_script)()
+local function PSHABTA_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+	local hub = script.Parent.Parent.HubFrame
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hub.Visible = not hub.Visible
+	end)
+end
+coroutine.wrap(PSHABTA_fake_script)()
+local function OECPFJW_fake_script() -- KanavaHub.LocalScript 
+	local script = Instance.new('LocalScript', KanavaHub)
+
+	script.Parent.ResetOnSpawn = false
+end
+coroutine.wrap(OECPFJW_fake_script)()
